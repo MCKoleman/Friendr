@@ -2,3 +2,47 @@
 body {
     margin: 0;
 }
+
+ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    color: white;
+}
+
+li a {
+    color: orange;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #dddddd;
+}
+
+li .sideline {
+    display: block;
+    float: right;
+}
+
+input .login {
+    border-radius: 5px;
+}
+
+.fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(190, 121, 255);
+}
+
+.white-text {
+    color: #ffffff;
+}

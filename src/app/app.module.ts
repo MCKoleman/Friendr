@@ -20,6 +20,9 @@ import { MatchingProfileComponent } from './matching-profile/matching-profile.co
 import { ContentService } from './shared/services/content.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ButtonComponent } from './button/button.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
+import { ProfileCreateComponent } from './profile-create/profile-create.component';
+import { InputFieldComponent } from './input-field/input-field.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ButtonComponent } from './button/button.component';
     MatchingCardComponent,
     MatchingProfileComponent,
     HomePageComponent,
-    ButtonComponent
+    ButtonComponent,
+    ProfileEditComponent,
+    ProfileCreateComponent,
+    InputFieldComponent
   ],
   imports: [
     BrowserModule,
