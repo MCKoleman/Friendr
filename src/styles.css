@@ -46,3 +46,25 @@ input .login {
 .white-text {
     color: #ffffff;
 }
+
+.black-text {
+    color: #ffffff;
+}
+
+.matching-card {
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    background-color: #dddddd;
+}
+
+.matching-match {
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    background-color: #dddddd;
+}
+
+.matching-profile {
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    background-color: #dddddd;
+}

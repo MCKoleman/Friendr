@@ -23,6 +23,7 @@ import { ButtonComponent } from './button/button.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { ProfileCreateComponent } from './profile-create/profile-create.component';
 import { InputFieldComponent } from './input-field/input-field.component';
+import { MatchingMatchComponent } from './matching-match/matching-match.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { InputFieldComponent } from './input-field/input-field.component';
     ButtonComponent,
     ProfileEditComponent,
     ProfileCreateComponent,
-    InputFieldComponent
+    InputFieldComponent,
+    MatchingMatchComponent
   ],
   imports: [
     BrowserModule,
