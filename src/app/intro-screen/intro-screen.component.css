@@ -1,0 +1,13 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(190, 121, 255);
+}
+
+.welcome-text {
+    color: #ffffff;
+}

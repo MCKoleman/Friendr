@@ -1,0 +1,36 @@
+.active {
+    background-color: #04AA6D;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    display: inline;
+    color: white;
+}
+
+li .copyright {
+    display: block;
+    text-align: center;
+    width: 100vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
