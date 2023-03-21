@@ -1,8 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Color codes
+Light Blue #1cc3ff
+Dark Blue #00425a
+Gray #1f8a70
+Yellow #bfdb38
+Orange #fc7300 
+*/
+
 body {
     margin: 0;
 }
 
+.fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1cc3ff;
+}
+
+/*
 ul {
     list-style-type: none;
     display: block;
@@ -33,24 +55,6 @@ input .login {
     border-radius: 5px;
 }
 
-.fullscreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(190, 121, 255);
-}
-
-.white-text {
-    color: #ffffff;
-}
-
-.black-text {
-    color: #ffffff;
-}
-
 .matching-card {
     border-color: #aaaaaa;
     border-radius: 5px;
@@ -68,3 +72,4 @@ input .login {
     border-radius: 5px;
     background-color: #dddddd;
 }
+*/
