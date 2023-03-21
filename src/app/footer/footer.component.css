@@ -14,9 +14,7 @@ li {
 li .copyright {
     display: block;
     text-align: center;
-    width: 100vw;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 6px;
 }
 
 li a {
@@ -28,5 +26,9 @@ li a {
 }
 
 li a:hover {
-    background-color: #111111;
+    color: #fc7300;
+}
+
+li .copyright:hover {
+    color: unset;
 }
