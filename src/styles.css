@@ -25,6 +25,14 @@ body {
     
 }
 
+.register {
+    color: #00425a;
+}
+
+.register:hover {
+    color: #fc7300;
+}
+
 /*
 ul {
     list-style-type: none;
