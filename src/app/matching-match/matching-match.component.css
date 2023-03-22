@@ -1,0 +1,19 @@
+.match-card {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.match-card img {
+    height: 150px;
+    width: 150px;
+    border: 1.5px solid #3C3C3C;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 20px;
+}
+
+.match-card p {
+    color: black;
+    padding-top: 5px;
+    font-size: 18px;
+}

@@ -1,0 +1,25 @@
+.matching-card {
+    background: white;
+    border-radius: 65px;
+    padding: 1.5em;
+    content: 0% 0%;
+}
+
+.matching-card ul li {
+    vertical-align: middle;
+}
+
+.card-img {
+    height: 350px;
+    border-radius: 44px;
+    margin-bottom: 10px;
+    border: 2px solid #292929;
+}
+
+.card-name {
+    font-size: 40px;
+}
+
+.card-bio {
+    font-size: 25px;
+}

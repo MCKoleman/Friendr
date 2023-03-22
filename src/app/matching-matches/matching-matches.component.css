@@ -1,0 +1,23 @@
+.container {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(247, 252, 255, 0.5) 0%, rgba(112, 169, 200, 0.5) 100%);
+    border: 1px solid #000000;
+    position: absolute;
+    width: 450px;
+    left: 0px;
+    top: 58px;
+    bottom: -58px;
+}
+
+.container h1 {
+    font-size: 40px;
+    margin: 10px;
+    font-weight: 250;
+}
+
+.container ul {
+    /* based on match size*/
+    width: 346px;
+    position: absolute;
+    /* (container width - ul width) / 2 */
+    left: 52px;
+}
