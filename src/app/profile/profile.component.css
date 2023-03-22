@@ -1,3 +1,8 @@
-:fullscreen {
-    width: auto;
+button {
+    padding: 8px;
+    min-width: 125px;
+    background-color: orange;
+    border-color:rgb(0, 10, 0);
+    border-radius: 10px;
+    
 }
