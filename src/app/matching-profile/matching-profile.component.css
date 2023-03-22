@@ -1,0 +1,18 @@
+.matching-profile {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+}
+
+.matching-profile img {
+    height: 150px;
+    width: 150px;
+    border: 1.5px solid #3C3C3C;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.matching-profile h3 {
+    font-size: 18px;
+}

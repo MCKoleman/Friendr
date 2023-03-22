@@ -4,7 +4,7 @@
     margin-right: 10px;
 }
 
-.match-pfp {
+.match-card img {
     height: 150px;
     width: 150px;
     border: 1.5px solid #3C3C3C;
@@ -12,7 +12,8 @@
     border-radius: 20px;
 }
 
-.match-txt {
+.match-card p {
     color: black;
     padding-top: 5px;
+    font-size: 18px;
 }
