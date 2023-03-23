@@ -1,18 +1,44 @@
 .matching-profile {
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.matching-profile img {
+div div {
+    height: 163px;
+}
+
+.pfp {
     height: 150px;
     width: 150px;
     border: 1.5px solid #3C3C3C;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
     border-radius: 20px;
-    margin-bottom: 5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+button {
+    border-radius: 50%;
+    border-width: 2px;
+    padding: 10px;
+    background-color: #0ee80e;
+    border-color: #0ba80b;
+    position: relative;
+    left: 70px;
+    top: -40px;
+}
+
+button:hover {
+    background-color: #0ba80b;
+}
+
+button img {
+    height: 30px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .matching-profile h3 {
     font-size: 18px;
+    margin-bottom: -5px;
 }

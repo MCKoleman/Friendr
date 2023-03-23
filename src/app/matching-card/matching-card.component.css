@@ -3,23 +3,24 @@
     border-radius: 65px;
     padding: 1.5em;
     content: 0% 0%;
+    display: inline-block;
 }
 
 .matching-card ul li {
     vertical-align: middle;
 }
 
-.card-img {
+li img {
     height: 350px;
     border-radius: 44px;
     margin-bottom: 10px;
     border: 2px solid #292929;
 }
 
-.card-name {
+li h3 {
     font-size: 40px;
 }
 
-.card-bio {
+li h4 {
     font-size: 25px;
 }
