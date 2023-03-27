@@ -24,6 +24,7 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { ProfileCreateComponent } from './profile-create/profile-create.component';
 import { InputFieldComponent } from './input-field/input-field.component';
 import { MatchingMatchComponent } from './matching-match/matching-match.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MatchingMatchComponent } from './matching-match/matching-match.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]

@@ -1,1 +1,82 @@
-<app-profile>
+<div class="fullscreen">
+    <div class="align-middle flex justify-between" >
+        <div class="absolute top-20 left-0 pl-10 ">
+                <img src="window.localStorage.getItem("profile")
+                    height="250px"
+                    width="250px">
+                    <input 
+                        type="file"
+                        [(ngModel)]="userProfile" 
+                        #image
+                        (keyup)="getProfile(image.value)" 
+                                          
+                    >
+                    <form>
+                        <li class="text-xl" type="text">
+                            <input 
+                                [(ngModel)]="userName"
+                                #box
+                                (keyup)="getName(box.value)"
+                                placeholder="Set new name"
+                            >
+                        </li>
+                        <li class="text-xl">
+                            <input
+                                [(ngModel)]="userAge"
+                                #box2
+                                (keyup)="getAge(box2.value)"
+                                placeholder="Set new age"
+
+                            >
+                        <li class="text-xl">
+                            <textarea rows="4"
+                                [(ngModel)]="userBio"
+                                #box3
+                                (keyup)="getBio(box3.value)"
+                                placeholder="Create new bio"
+                                
+                            >
+                            </textarea>     
+                        </li>
+                    </form>
+        </div>
+        <div class="absolute top-20 flex align-middle space-x-7" >
+            <img src="../../assets/UserPictures/CollegeFun.jpeg"
+                height="250px"
+                width="250px">
+            <img src="../../assets/UserPictures/RocketLaunch.jpg"  
+                height="250px"
+                width="250px">  
+            <div class="p-0 pt-10"><app-button text="See more"></app-button> </div>
+        </div>
+        <div class="align-top">
+            <div class="align-top text-left"> 
+                <h1 class="text-xl pt-10">
+                    Interests:
+                </h1>
+                <textarea rows="4"
+                    [(ngModel)]="userInterests"
+                    #box4
+                    (keyup)="getInterests(box4.value)"
+                    placeholder="Add interests"
+                >
+                </textarea>     
+            </div>
+            <div class="align-top text-left"> 
+                <h1 class="text-xl">
+                    Looking for:
+                </h1>
+                <textarea rows="4"
+                    [(ngModel)]="userLooking"
+                    #box5
+                    (keyup)="getLooking(box5.value)"
+                    placeholder="Add what you are looking for"
+                >
+                </textarea>   
+            </div>
+            <div class="pt-10 absolute right-10" >
+                <app-button className="button"  link="\profile" text="Done!">Done!</app-button>
+            </div>
+        </div>
+    </div>
+</div>

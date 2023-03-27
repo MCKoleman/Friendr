@@ -6,13 +6,13 @@
                     width="250px">
                     <ul>
                         <li class="text-xl">
-                            Name
+                            {{userName}}
                         </li>
                         <li class="text-xl">
-                            Age
+                            {{userAge}}
                         </li>
                         <li class="text-xl">
-                            Bio
+                            {{userBio}}
                         </li>
                     </ul>
         </div>
@@ -31,7 +31,7 @@
                     Interests:
                 </h1>
                 <div class="pb-10">
-                    Default Interests
+                    {{userInterests}}
                 </div>
             </div>
             <div class="align-top text-left"> 
@@ -39,14 +39,12 @@
                     Looking for:
                 </h1>
                 <div>
-                    Default looking for
+                    {{userLooking}}
                 </div>
             </div>
             <div class="pt-10 absolute right-10" >
-                <button className="button" text="Edit Profile">Edit Profile</button>
+                <app-button className="button"  link="\profile/edit" text="Edit Profile">Edit Profile</app-button>
             </div>
         </div>
-
-
     </div>
 </div>
