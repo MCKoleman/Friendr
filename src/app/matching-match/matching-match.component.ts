@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./matching-match.component.css']
 })
 export class MatchingMatchComponent {
-
 }

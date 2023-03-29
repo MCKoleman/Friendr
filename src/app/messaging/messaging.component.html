@@ -1,36 +1,30 @@
 <div class="fullscreen">
+    <app-matching-matches></app-matching-matches>
     <ul>
-        <li>
-            <app-messaging-conversation></app-messaging-conversation>
+        <li class="absolute top-20">
+            <img 
+            src="../../assets/UserIcons/hillary18.jfif"
+            height=150px 
+            width=150px
+            >
+            <p>Hillary</p>
+
         </li>
-        <li>
-            <app-messaging-conversation></app-messaging-conversation>
-        </li>
-        <li>
-            <app-messaging-conversation></app-messaging-conversation>
-        </li>
-        <li>
-            <app-messaging-conversation></app-messaging-conversation>
-        </li>
-        <li>
-            <app-messaging-conversation></app-messaging-conversation>
-        </li>
+        
     </ul>
-    <ul>
-        <li>
-            <app-messaging-message></app-messaging-message>
+
+    <ul class="flex align-middle">
+        <li class="absolute bottom-0 space-x-5">
+            <ng-container *ngIf="visible" >
+                <p id="reveal" class="bottom-2/4">{{userMessage}}</p>
+            </ng-container>
+            <input class="w-96 rounded-lg"
+            [(ngModel)]="userMessage"
+            #box10
+            (keyup)="getMessage(box10.value)"
+            placeholder="Say hi to start the conversation!">
+            <button id="reveal" (click)="Message()">Send!</button>
         </li>
-        <li>
-            <app-messaging-message></app-messaging-message>
-        </li>
-        <li>
-            <app-messaging-message></app-messaging-message>
-        </li>
-        <li>
-            <app-messaging-message></app-messaging-message>
-        </li>
-        <li>
-            <app-messaging-message></app-messaging-message>
-        </li>
+        
     </ul>
 </div>
