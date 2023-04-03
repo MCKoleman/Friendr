@@ -12,6 +12,7 @@
 
 li img {
     height: 350px;
+    width: 350px;
     border-radius: 44px;
     margin-bottom: 10px;
     border: 2px solid #292929;
@@ -19,8 +20,10 @@ li img {
 
 li h3 {
     font-size: 40px;
+    width: 350px;
 }
 
 li h4 {
     font-size: 25px;
+    width: 350px;
 }
