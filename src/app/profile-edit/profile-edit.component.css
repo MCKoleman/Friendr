@@ -1,0 +1,73 @@
+button {
+    padding: 8px;
+    min-width: 125px;
+    background-color: orange;
+    border-color:rgb(0, 10, 0);
+    border-radius: 10px;
+}
+
+.basic-info {
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+}
+
+.pfp {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 3px solid #2C638C;
+    margin-bottom: 10px;
+}
+
+form li {
+    list-style: none;
+    margin-top: 15px;
+}
+
+form li p {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 250px;
+}
+
+form textarea {
+    width: 250px;
+}
+
+.posts {
+    position: absolute;
+    top: 6rem;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.posts img {
+    height: 175px;
+    width: 250px;
+    border: 3px solid #2C638C;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 500;
+    width: 300px;
+}
+
+textarea {
+    resize: none;
+    width: 400px;
+}
+
+.topic {
+    vertical-align: top;
+    text-align: left;
+    margin-top: 20px;
+    width: 400px;
+}

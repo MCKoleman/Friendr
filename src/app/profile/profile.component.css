@@ -4,5 +4,53 @@ button {
     background-color: orange;
     border-color:rgb(0, 10, 0);
     border-radius: 10px;
-    
+}
+
+.basic-info {
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 500;
+    width: 300px;
+}
+
+.sub {
+    font-size: 20px;
+    font-weight: 300;
+    width: 300px;
+}
+
+.pfp {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 3px solid #2C638C;
+}
+
+.posts {
+    position: absolute;
+    top: 6rem;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.posts img {
+    height: 175px;
+    width: 250px;
+    border: 3px solid #2C638C;
+    border-radius: 10px;
+}
+
+.topic {
+    vertical-align: top;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 400px;
 }
