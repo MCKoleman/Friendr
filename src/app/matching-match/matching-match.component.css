@@ -4,6 +4,10 @@
     margin-right: 10px;
 }
 
+.match-card img:hover {
+    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5);
+}
+
 .match-card img {
     height: 150px;
     width: 150px;
