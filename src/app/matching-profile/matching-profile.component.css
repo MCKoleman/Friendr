@@ -41,4 +41,9 @@ button img {
 .matching-profile h3 {
     font-size: 18px;
     margin-bottom: -5px;
+    width: 150px;
+}
+
+.matching-profile h4 {
+    width: 150px;
 }
