@@ -1,15 +1,8 @@
 <div class="fullscreen">
     <app-matching-matches></app-matching-matches>
     <ul class="grid grid-flow-row-dense grid-cols-3" style="align-items: start">
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
-        <app-matching-profile></app-matching-profile>
+        <tr *ngFor="let user as const of users;">
+            <app-matching-profile profile={{user}}></app-matching-profile>
+        </tr>
     </ul>
 </div>

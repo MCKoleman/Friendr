@@ -1,12 +1,12 @@
-export type userList = [
+export let userList = [
     {
         name: "Dhinesh",
         age: 24,
         bio: "Need someone to go snowboarding with!",
         interests: "",
         lookingfor: "",
-        pfp: "../assets/UserIcons/dhinesh24.png",
-        imgs: []
+        pfp: "/assets/UserIcons/dhinesh24.png",
+        imgs: [] as string[]
     },
     {
         name: "Brandon",
@@ -15,7 +15,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/brandon22.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Hillary",
@@ -24,7 +24,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/hillary18.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Luka",
@@ -33,7 +33,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/luka23.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Sarah",
@@ -42,7 +42,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/sarah26.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Rebecca",
@@ -51,7 +51,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/rebecca25.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Alejandro",
@@ -60,7 +60,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/alejandro20.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Jared",
@@ -69,7 +69,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/jared19.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Pietro",
@@ -78,7 +78,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/pietro21.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Connor",
@@ -87,7 +87,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/connor24.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Frank",
@@ -96,7 +96,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/frank22.png",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Bridgit",
@@ -105,7 +105,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/bridgit19.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Jere",
@@ -114,7 +114,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/jere27.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Jamie",
@@ -123,7 +123,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/jamie24.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Kylie",
@@ -132,7 +132,7 @@ export type userList = [
         interests: "",
         lookingfor: "",
         pfp: "../assets/UserIcons/kylie23.jfif",
-        imgs: []
+        imgs: [] as string[]
     },
     {
         name: "Jeff",
@@ -144,6 +144,6 @@ export type userList = [
         imgs: [
             "../assets/UserPictures/CollegeFun.jpeg",
             "../assets/UserPictures/RocketLaunch.jpg"
-        ]
+        ] as string[]
     },
-];
+] as const;
