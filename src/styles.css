@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Color codes
+Light Blue #1cc3ff
+Dark Blue #00425a
+Gray #1f8a70
+Yellow #bfdb38
+Orange #fc7300 
+*/
+
+body {
+    margin: 0;
+}
+
+.fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #86BBD8;
+    
+}
+
+.register {
+    color: #00425a;
+}
+
+.register:hover {
+    color: #fc7300;
+}
+
+/*
+ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    color: white;
+}
+
+li a {
+    color: orange;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #dddddd;
+}
+
+li .sideline {
+    display: block;
+    float: right;
+}
+
+input .login {
+    border-radius: 5px;
+}
+
+.matching-card {
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    background-color: #dddddd;
+}
+
+.matching-match {
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    background-color: #dddddd;
+}
+
+.matching-profile {
+    border-color: #aaaaaa;
+    border-radius: 5px;
+    background-color: #dddddd;
+}
+*/

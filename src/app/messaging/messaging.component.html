@@ -1,0 +1,27 @@
+<div class="fullscreen">
+    <app-matching-matches></app-matching-matches>
+    <ul class="contact">
+        <li>
+            <img 
+            src="../../assets/UserIcons/hillary18.jfif"
+            >
+        </li>
+        <li>
+            <p>Hillary</p>
+        </li>
+    </ul>
+
+    <ul class="flex align-middle">
+        <li class="absolute bottom-0 space-x-5">
+            <ng-container *ngIf="visible" >
+                <p id="reveal" class="bottom-2/4">{{userMessage}}</p>
+            </ng-container>
+            <input [(ngModel)]="userMessage"
+            #box10
+            (keyup)="getMessage(box10.value)"
+            placeholder="Say hi to start the conversation!">
+            <button id="reveal" (click)="Message()">Send!</button>
+        </li>
+        
+    </ul>
+</div>

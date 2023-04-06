@@ -1,0 +1,34 @@
+.active {
+    background-color: #04AA6D;
+}
+
+ul {
+    background-color: #333333;
+}
+
+li {
+    display: inline;
+    color: white;
+}
+
+li .copyright {
+    display: block;
+    text-align: center;
+    padding: 6px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #fc7300;
+}
+
+li .copyright:hover {
+    color: unset;
+}
