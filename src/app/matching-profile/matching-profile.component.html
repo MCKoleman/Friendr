@@ -1,8 +1,9 @@
 <div class="matching-profile">
     <img src={{profile.pfp}}
         height="150px"
-        width="150px"/>
-    <button><img src="../../assets/Handshake.png"/></button>
+        width="150px"
+        class="rounded-lg"/>
+    <button (click)="onAccept()"><img src="../../assets/Handshake.png"/></button>
     <h3>{{profile.name}}, {{profile.age}}</h3>
     <h4>{{profile.bio}}</h4>
 </div>

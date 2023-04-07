@@ -17,6 +17,16 @@ export class MatchingProfileComponent {
     imgs: string[]
   }
 
+  onAccept() {
+    let matches = [];
+    let rawMatches = localStorage.getItem("matches");
+    if (rawMatches !== null) {
+      matches = JSON.parse(rawMatches);
+    }
+    matches.push(this.profile.id);
+    localStorage.setItem("matches", JSON.stringify(matches));
+  }
+
   constructor() {
     this.profile = null as any;
   }
