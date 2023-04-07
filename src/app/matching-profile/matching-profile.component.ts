@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class MatchingProfileComponent {
   @Input() profile: {
+    id: string,
     name: string,
     age: number,
     bio: string,
@@ -15,9 +16,10 @@ export class MatchingProfileComponent {
     pfp: string,
     imgs: string[]
   }
-  
+
   constructor() {
     this.profile = {
+      id: "sample",
       name: "Sample",
       age: 123,
       bio: "Sample bio",

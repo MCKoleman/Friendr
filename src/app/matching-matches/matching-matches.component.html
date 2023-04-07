@@ -1,7 +1,8 @@
 <div class="container w-full mx-auto">
     <h1>Your Matches</h1>
-    <ul class="grid grid-flow-row-dense grid-cols-2 grid-rows-2">
-        <app-matching-match></app-matching-match>
-
+    <ul class="grid grid-flow-row-dense grid-cols-2 grid-rows-3" style="align-items: start">
+        <tr *ngFor="let user of matches;">
+            <app-matching-match [profile]="user"></app-matching-match>
+        </tr>
     </ul>
 </div>

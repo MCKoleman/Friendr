@@ -1,10 +1,8 @@
 <div class="fullscreen">
     <app-matching-matches></app-matching-matches>
-
     <ul class="grid grid-flow-row-dense grid-cols-3" style="align-items: start">
-        <tr *ngFor="let user of users.userList;">
+        <tr *ngFor="let user of users;">
             <app-matching-profile [profile]="user"></app-matching-profile>
         </tr>
     </ul>
-
 </div>
