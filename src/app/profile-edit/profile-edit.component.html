@@ -8,7 +8,7 @@
                         [(ngModel)]="userProfile" 
                         #image
                         (keyup)="getProfile(image.value)">
-                    <form>
+                    <ul>
                         <li class="text-xl" type="text">
                             <p>Name: </p>
                             <input 
@@ -35,9 +35,9 @@
                                 #box3
                                 (keyup)="getBio(box3.value)"
                                 placeholder="Create new bio"
-                                ></textarea>     
+                            ></textarea>     
                         </li>
-                    </form>
+                    </ul>
         </div>
         <div class="posts space-x-7" >
             <img src="../../assets/UserPictures/black-cat.jpg">
@@ -50,6 +50,7 @@
                     Interests:
                 </h1>
                 <textarea rows="4"
+                    cols="77"
                     [(ngModel)]="userInterests"
                     #box4
                     (keyup)="getInterests(box4.value)"
@@ -61,6 +62,7 @@
                     Looking for:
                 </h1>
                 <textarea rows="4"
+                    cols="77"
                     [(ngModel)]="userLooking"
                     #box5
                     (keyup)="getLooking(box5.value)"
