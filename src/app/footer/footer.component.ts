@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   onClearData() {
     localStorage.removeItem("matches");
+    window.location.reload();
   }
 }

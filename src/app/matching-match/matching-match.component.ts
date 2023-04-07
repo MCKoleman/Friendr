@@ -18,15 +18,6 @@ export class MatchingMatchComponent {
   }
   
   constructor() {
-    this.profile = {
-      id: "sample",
-      name: "Sample",
-      age: 123,
-      bio: "Sample bio",
-      interests: "Sample interests",
-      lookingfor: "Sample looking",
-      pfp: "../assets/UserIcons/dhinesh24.png",
-      imgs: [] as string[]
-    };
+    this.profile = null as any;
   }
 }

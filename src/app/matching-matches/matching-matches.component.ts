@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UserList } from 'src/data/users';
 
 @Component({
   selector: 'app-matching-matches',
@@ -6,7 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./matching-matches.component.css']
 })
 export class MatchingMatchesComponent {
-  @Input() matches: {
+  @Input() matchIDs: string[];
+  matches: {
     id: string,
     name: string,
     age: number,
@@ -16,17 +18,35 @@ export class MatchingMatchesComponent {
     pfp: string,
     imgs: string[]
   }[]
+  userList: any;
+
+  getMatches() {
+    let rawMatches = localStorage.getItem("matches");
+    if (rawMatches != null) {
+      let matchIDs = JSON.parse(rawMatches);
+      this.matches = [] as any;
+
+      // Load matches from IDs
+      for (let i = 0; i < matchIDs.length; i++) {
+        let user = this.userList.getUser(matchIDs[i]);
+        if (user != null) {
+          this.matches.push(user);
+          if (this.matches.length >= 6) {
+            return;
+          }
+        }
+      }
+    }
+  }
   
+  ngOnChanges() {
+    this.getMatches();
+  }
+
   constructor() {
-    this.matches = [{
-      id: "sample",
-      name: "Sample",
-      age: 123,
-      bio: "Sample bio",
-      interests: "Sample interests",
-      lookingfor: "Sample looking",
-      pfp: "../assets/UserIcons/dhinesh24.png",
-      imgs: [] as string[]
-    }];
+    this.userList = new UserList();
+    this.matches = [] as any;
+    this.matchIDs = [] as any;
+    this.getMatches();
   }
 }
