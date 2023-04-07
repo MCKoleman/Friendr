@@ -15,23 +15,72 @@
     height: 80px;
     width: 80px;
     margin-right: 20px;
+    position: relative;
+    left: 70px;
 }
 
 .contact p {
     font-size: 25px;
     font-weight: 500;
+    position: relative;
+    left: 70px;
 }
 
 input {
+    font-size: 1.25rem;
     width: 384px;
     border-radius: 8px;
     padding: 5px;
+    word-wrap: break-word;
 }
 
 button {
+    font-size: 1.25rem;
     padding: 5px;
     min-width: 125px;
     background-color: orange;
     border-color:rgb(0, 10, 0);
     border-radius: 10px;
+    position: relative;
+    right: -10px;
 }
+
+.message {
+    background-color: #fff;
+    border: 1px solid #e5e5ea;
+    border-radius: 25px;
+    font-size: 1.25rem;
+    margin: 0 auto 1rem;
+    line-height: 1.25;
+    max-width: 90%;
+    width: fit-content;
+    padding: 0.5rem .875rem;
+    position: absolute;
+    word-wrap: break-word;
+    display: table;
+    right: 0px;
+    bottom: 40px;
+  }
+
+  .message::before,
+  .message::after {
+    bottom: -0.1rem;
+    content: "";
+    height: 1rem;
+    position: absolute;
+  }
+
+  .message::before {
+    border-bottom-left-radius: 0.8rem 0.7rem;
+    border-right: 1rem solid #fff;
+    right: -0.35rem;
+    transform: translate(0, -0.1rem);
+  }
+
+  .message::after {
+    background-color: #86BBD8;
+    border-bottom-left-radius: 0.5rem;
+    right: -40px;
+    transform:translate(-30px, -2px);
+    width: 10px;
+  }
