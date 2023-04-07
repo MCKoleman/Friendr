@@ -51,10 +51,11 @@ button {
     max-width: 90%;
     width: fit-content;
     padding: 0.5rem .875rem;
-    position: relative;
+    position: absolute;
     word-wrap: break-word;
     display: table;
-    right: -125px;
+    right: 0px;
+    bottom: 40px;
   }
 
   .message::before,
