@@ -1,5 +1,5 @@
 <div class="fullscreen">
-    <app-matching-matches style="min-width: 300px"></app-matching-matches>
+    <app-matching-matches [matchIDs]="matches" style="min-width: 300px"></app-matching-matches>
     <button *ngIf="curMatch != null" class="btn reject" (click)="onReject()">
         <img src="../../assets/no-symbol-cropped.svg"/>
     </button>
