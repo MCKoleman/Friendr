@@ -8,6 +8,7 @@ import { UserList } from 'src/data/users';
 })
 export class MatchingSwipeComponent {
   matches: [id: string];
+  rejects: [id: string];
   userList: any;
 
   curMatch: {
@@ -33,6 +34,8 @@ export class MatchingSwipeComponent {
   // Reject current match
   onReject() {
     this.loadMatches();
+    this.rejects.push(this.curMatch.id);
+    localStorage.setItem("rejects", JSON.stringify(this.rejects));
     this.setNextMatch();
   }
 
@@ -42,6 +45,10 @@ export class MatchingSwipeComponent {
     let rawMatches = localStorage.getItem("matches");
     if (rawMatches != null) {
       this.matches = JSON.parse(rawMatches);
+    }
+    let rawRejects = localStorage.getItem("rejects");
+    if (rawRejects != null) {
+      this.rejects = JSON.parse(rawRejects);
     }
   }
 
@@ -54,35 +61,21 @@ export class MatchingSwipeComponent {
 
     // Find the user after the current match
     for (let i = 0; i < this.userList.length; i++) {
-      if (this.userList[i].id == this.curMatch.id) {
-        // If there is still at least one user, set it as the next match
-        // Don't match the same user again
-        while (i + 1 < this.userList.length) {
-          if (!this.matches.includes(this.userList[i + 1].id)) {
-            this.curMatch = this.userList[i + 1];
-            return;
-          }
-          i++;
-        }
-        // If the list is over, mark matches as over
-        this.curMatch = null as any;
-        return;
-      }
-    }
-
-    // If the users after the current
-    for (let i = 0; i < this.userList.length; i++) {
-      if (!this.matches.includes(this.userList[i].id)) {
+      if (!this.matches.includes(this.userList[i].id) 
+      && !this.rejects.includes(this.userList[i].id)) {
         this.curMatch = this.userList[i];
         return;
       }
     }
+    this.curMatch = null as any;
+    return;
   }
 
   ngOnInit() {
     this.userList = new UserList().userList;
     this.curMatch = this.userList[0];
     this.matches = [] as any;
+    this.rejects = [] as any;
     this.loadMatches();
     this.setNextMatch();
   }
@@ -91,6 +84,7 @@ export class MatchingSwipeComponent {
     this.userList = new UserList().userList;
     this.curMatch = this.userList[0];
     this.matches = [] as any;
+    this.rejects = [] as any;
     this.loadMatches();
     this.setNextMatch();
   }

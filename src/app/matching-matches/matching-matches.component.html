@@ -1,13 +1,11 @@
 <div class="container w-full mx-auto">
     <h1>Your Matches</h1>
-    <ul class="grid grid-flow-row-dense grid-cols-2 grid-rows-3"
-        style="align-items: start"
-        *ngIf="matches.length !== 0">
-        <tr *ngFor="let user of matches;">
-            <app-matching-match [profile]="user"></app-matching-match>
+    <ul class="grid grid-flow-row-dense grid-cols-2 grid-rows-3" style="align-items: start">
+        <tr *ngFor="let user of matchIDs;">
+            <app-matching-match [profileID]="user"></app-matching-match>
         </tr>
+        <div *ngIf="matchIDs.length === 0">
+            <h4>No matches yet!</h4>
+        </div>
     </ul>
-    <div *ngIf="matches.length === 0">
-        <h4>No matches yet!</h4>
-    </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UserList } from 'src/data/users';
 
 @Component({
   selector: 'app-matching-match',
@@ -6,7 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./matching-match.component.css']
 })
 export class MatchingMatchComponent {
-  @Input() profile: {
+  @Input() profileID: string;
+  profile: {
     id: string,
     name: string,
     age: number,
@@ -15,9 +17,15 @@ export class MatchingMatchComponent {
     lookingfor: string,
     pfp: string,
     imgs: string[]
-  }
+  };
   
+  ngOnChanges() {
+    let users = new UserList();
+    this.profile = users.getUser(this.profileID);
+  }
+
   constructor() {
+    this.profileID = null as any;
     this.profile = null as any;
   }
 }
