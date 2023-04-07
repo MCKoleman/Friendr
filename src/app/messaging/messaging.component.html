@@ -11,12 +11,13 @@
         </li>
     </ul>
 
-    <ul class="flex align-middle">
-        <li class="absolute bottom-0 space-x-5">
+    <ul>
+        <li class="absolute bottom-0">
             <ng-container *ngIf="visible" >
-                <p id="reveal" class="bottom-2/4">{{userMessage}}</p>
+                <p class="message" id="reveal">{{userMessage}}</p>
             </ng-container>
-            <input [(ngModel)]="userMessage"
+            <input
+            [(ngModel)]="userMessage"
             #box10
             (keyup)="getMessage(box10.value)"
             placeholder="Say hi to start the conversation!">
