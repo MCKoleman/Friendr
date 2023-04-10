@@ -23,9 +23,15 @@ export class MessagingComponent {
     pfp: string,
     imgs: string[]
   };
+  matches: [id: string];
 
   constructor(private route: ActivatedRoute) {
     this.profile = null as any;
+    this.matches = null as any;
+    let rawMatches = localStorage.getItem("matches");
+    if (rawMatches != null) {
+      this.matches = JSON.parse(rawMatches);
+    }
   }
 
   Message() {
@@ -38,8 +44,6 @@ export class MessagingComponent {
     this.userMessage = message;
     window.localStorage.setItem("message", this.userMessage);
   }
-
-
 
   ngOnInit() {
     let users = new UserList;

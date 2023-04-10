@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-matching-profile',
@@ -16,6 +16,7 @@ export class MatchingProfileComponent {
     pfp: string,
     imgs: string[]
   }
+  @Output() matchEvent = new EventEmitter<string>();
 
   onAccept() {
     let matches = [];
@@ -25,6 +26,7 @@ export class MatchingProfileComponent {
     }
     matches.push(this.profile.id);
     localStorage.setItem("matches", JSON.stringify(matches));
+    this.matchEvent.emit("");
   }
 
   constructor() {
