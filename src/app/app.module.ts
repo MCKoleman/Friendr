@@ -25,11 +25,13 @@ import { ProfileCreateComponent } from './profile-create/profile-create.componen
 import { InputFieldComponent } from './input-field/input-field.component';
 import { MatchingMatchComponent } from './matching-match/matching-match.component';
 import { FormsModule } from '@angular/forms';
+import { MatchingComponent } from './matching/matching.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroScreenComponent,
+    MatchingComponent,
     MatchingGridComponent,
     MatchingSwipeComponent,
     MatchingMatchesComponent,

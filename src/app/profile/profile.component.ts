@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  userName = window.localStorage.getItem("name");
-  userAge = window.localStorage.getItem("age");
-  userBio = window.localStorage.getItem("bio");
-  userInterests = window.localStorage.getItem("interests");
-  userLooking = window.localStorage.getItem("looking");
+  userName = localStorage.getItem("name");
+  userAge = localStorage.getItem("age");
+  userBio = localStorage.getItem("bio");
+  userInterests = localStorage.getItem("interests");
+  userLooking = localStorage.getItem("looking");
 }
