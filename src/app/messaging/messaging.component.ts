@@ -26,19 +26,36 @@ export class MessagingComponent {
   matches: [id: string];
 
   sendMessage() {
+    if (this.messages == null) {
+      this.messages = [];
+    }
     this.messages.push(this.userMessageInput);
     this.userMessageInput = null as any;
     this.visible = !this.visible;
-    localStorage.setItem("messages", JSON.stringify(this.messages));
-    this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
+
+    // Store messages
+    let rawMessages = localStorage.getItem("messages");
+    let messageList = {} as any;
+    if (rawMessages != null) {
+      messageList = JSON.parse(rawMessages);
+    }
+    messageList[this.profileID] = this.messages;
+    localStorage.setItem("messages", JSON.stringify(messageList));
+
+    if (this.messages != null) {
+      this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
+    }
   }
   
   getMessages() {
     let rawMessages = localStorage.getItem("messages");
-    if (rawMessages !== null) {
-      this.messages = JSON.parse(rawMessages);
+    if (rawMessages != null) {
+      let messageList = JSON.parse(rawMessages);
+      this.messages = messageList[this.profileID];
     }
-    this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
+    if (this.messages != null) {
+      this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
+    }
   }
 
   getMatches() {
