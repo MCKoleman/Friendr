@@ -10,6 +10,8 @@ import { UserList } from 'src/data/users';
 export class MessagingComponent {
   userMessageInput = window.localStorage.getItem("message");
   userMessage = window.localStorage.getItem("message");
+  messagingVisible:boolean = false;
+  noMatches:boolean = true;
   showMore:boolean = true;
   visible:boolean = false;
   profileID: string = "9a660cf49a8f94bc";
@@ -32,6 +34,8 @@ export class MessagingComponent {
     let rawMatches = localStorage.getItem("matches");
     if (rawMatches != null) {
       this.matches = JSON.parse(rawMatches);
+      this.messagingVisible = true;
+      this.noMatches = false;
     }
   }
 
