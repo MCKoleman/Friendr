@@ -19,19 +19,17 @@ export class MatchingMatchComponent {
     pfp: string,
     imgs: string[]
   };
+  url: string;
   
   ngOnChanges() {
     let users = new UserList();
     this.profile = users.getUser(this.profileID);
+    this.url = "./messages/" + this.profileID;
   }
 
   constructor(private router : Router) {
     this.profileID = null as any;
     this.profile = null as any;
-  }
-
-  messagingRedirect() {
-    console.log("clicked on the user");
-    this.router.navigate(['./messages', encodeURIComponent(this.profileID)]);
+    this.url = null as any;
   }
 }

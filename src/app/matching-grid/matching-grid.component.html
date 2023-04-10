@@ -2,7 +2,7 @@
     <app-matching-matches [matchIDs]="matches"></app-matching-matches>
     <ul class="h-screen overflow-y-scroll grid grid-flow-row-dense grid-cols-3 pt-7" style="align-items: start">
         <tr *ngFor="let user of users;">
-            <app-matching-profile [profile]="user"></app-matching-profile>
+            <app-matching-profile [profile]="user" (matchEvent)="updateDisplay()"></app-matching-profile>
         </tr>
     </ul>
 </div>

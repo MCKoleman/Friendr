@@ -1,4 +1,6 @@
 <div class="match-card">
-    <img class="rounded-lg" src={{profile.pfp}} (click)="messagingRedirect() "/>
+    <a href={{url}}>
+        <img class="rounded-lg" src={{profile.pfp}}/>
+    </a>
     <p>{{profile.name}}, {{profile.age}}</p>
 </div>
