@@ -17,7 +17,7 @@
                 <p class="message" id="reveal">{{userMessage}}</p>
             </ng-container>
             <input
-            [(ngModel)]="userMessage"
+            [(ngModel)]="userMessageInput"
             #box10
             (keyup)="getMessage(box10.value)"
             placeholder="Say hi to start the conversation!">

@@ -8,6 +8,7 @@ import { UserList } from 'src/data/users';
   styleUrls: ['./messaging.component.css']
 })
 export class MessagingComponent {
+  userMessageInput = window.localStorage.getItem("message");
   userMessage = window.localStorage.getItem("message");
   showMore:boolean = true;
   visible:boolean = false;
@@ -37,6 +38,8 @@ export class MessagingComponent {
   Message() {
     this.showMore = !this.showMore;
     this.visible = !this.visible;
+    this.userMessage = this.userMessageInput;
+    this.userMessageInput = null;
   }
   
   getMessage(message:string) {
