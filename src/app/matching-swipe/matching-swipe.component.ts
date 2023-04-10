@@ -58,6 +58,8 @@ export class MatchingSwipeComponent {
     if (this.curMatch == null) {
       return;
     }
+    // Forcefully loads matches
+    this.loadMatches();
 
     // Find the user after the current match
     for (let i = 0; i < this.userList.length; i++) {
@@ -76,7 +78,6 @@ export class MatchingSwipeComponent {
     this.curMatch = this.userList[0];
     this.matches = [] as any;
     this.rejects = [] as any;
-    this.loadMatches();
     this.setNextMatch();
   }
 
@@ -85,7 +86,6 @@ export class MatchingSwipeComponent {
     this.curMatch = this.userList[0];
     this.matches = [] as any;
     this.rejects = [] as any;
-    this.loadMatches();
     this.setNextMatch();
   }
 }
