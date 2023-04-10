@@ -12,6 +12,7 @@
 
 .contact img {
     border-radius: 50%;
+    border: 1px solid #3C3C3C;
     height: 80px;
     width: 80px;
     margin-right: 20px;
