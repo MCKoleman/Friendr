@@ -9,6 +9,7 @@ export class FooterComponent {
   onClearData() {
     localStorage.removeItem("matches");
     localStorage.removeItem("rejects");
+    localStorage.removeItem("messages");
     localStorage.removeItem("name");
     localStorage.removeItem("age");
     localStorage.removeItem("bio");

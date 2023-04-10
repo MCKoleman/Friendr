@@ -51,39 +51,13 @@ button {
     border: 1px solid #e5e5ea;
     border-radius: 25px;
     font-size: 1.25rem;
-    margin: 0 auto 1rem;
     line-height: 1.25;
-    max-width: 90%;
+    max-width: 100%;
     width: fit-content;
     padding: 0.5rem .875rem;
-    position: absolute;
+    text-align: right;
     word-wrap: break-word;
-    display: table;
-    right: 0px;
     bottom: 40px;
-  }
-
-  .message::before,
-  .message::after {
-    bottom: -0.1rem;
-    content: "";
-    height: 1rem;
-    position: absolute;
-  }
-
-  .message::before {
-    border-bottom-left-radius: 0.8rem 0.7rem;
-    border-right: 1rem solid #fff;
-    right: -0.35rem;
-    transform: translate(0, -0.1rem);
-  }
-
-  .message::after {
-    background-color: #86BBD8;
-    border-bottom-left-radius: 0.5rem;
-    right: -40px;
-    transform:translate(-30px, -2px);
-    width: 10px;
   }
 
   .errorMsg {

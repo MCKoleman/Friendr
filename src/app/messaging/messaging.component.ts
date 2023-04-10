@@ -8,13 +8,10 @@ import { UserList } from 'src/data/users';
   styleUrls: ['./messaging.component.css']
 })
 export class MessagingComponent {
-  userMessageInput = window.localStorage.getItem("message");
-  userMessage = window.localStorage.getItem("message");
-  messagingVisible:boolean = false;
-  noMatches:boolean = true;
-  showMore:boolean = true;
-  visible:boolean = false;
-  profileID: string = "9a660cf49a8f94bc";
+  userMessageInput: string;
+  messages: string[];
+  visible = false;
+  profileID: string = "";
 
   profile: {
     id: string,
@@ -28,41 +25,60 @@ export class MessagingComponent {
   };
   matches: [id: string];
 
-  constructor(private route: ActivatedRoute) {
-    this.profile = null as any;
-    this.matches = null as any;
+  sendMessage() {
+    this.messages.push(this.userMessageInput);
+    this.userMessageInput = null as any;
+    this.visible = !this.visible;
+    localStorage.setItem("messages", JSON.stringify(this.messages));
+    this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
+  }
+  
+  getMessages() {
+    let rawMessages = localStorage.getItem("messages");
+    if (rawMessages !== null) {
+      this.messages = JSON.parse(rawMessages);
+    }
+    this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
+  }
+
+  getMatches() {
     let rawMatches = localStorage.getItem("matches");
     if (rawMatches != null) {
       this.matches = JSON.parse(rawMatches);
-      this.messagingVisible = true;
-      this.noMatches = false;
     }
   }
 
-  Message() {
-    this.showMore = !this.showMore;
-    this.visible = !this.visible;
-    this.userMessage = this.userMessageInput;
-    this.userMessageInput = null;
-  }
-  
-  getMessage(message:string) {
-    console.warn(message);
-    this.userMessage = message;
-    window.localStorage.setItem("message", this.userMessage);
+  ngOnChanges() {
+
   }
 
   ngOnInit() {
     let users = new UserList;
     this.route.paramMap.subscribe(params => {
-       this.profileID = decodeURIComponent(params.get('profileID') as string);
-    }) 
-    // this.profile = users.getUser(this.profileID);
-    // console.log(this.profile.name);
-    this.loadMessageProfile(this.profileID, users);
+      this.profileID = decodeURIComponent(params.get('profileID') as string);
+    });
+
+    // If loading in without specifying the user, select first match
+    this.getMessages();
+    this.getMatches();
+    if (this.matches == null) {
+      this.profile = null as any;
+    }
+    // If user is invalid, navigate to proper tab
+    else if (this.profileID == null || this.profileID === "null") {
+      window.location.href = "/messages/" + this.matches[0];
+    }
+    // Only load user if it is not invalid
+    else {
+      this.profile = users.getUser(this.profileID);
+    }
   }
 
-  loadMessageProfile(profileID: string, users: UserList) {
-    this.profile = users.getUser(this.profileID);
+  constructor(private route: ActivatedRoute) {
+    this.profile = null as any;
+    this.matches = null as any;
+    this.userMessageInput = null as any;
+    this.messages = [];
+    this.getMatches();
   }
 }

@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'login', component: LoginScreenComponent},
   {path: 'register', component: RegisterScreenComponent},
   {path: 'matching', component: MatchingComponent},
+  {path: 'messages', component: MessagingComponent},
   {path: 'messages/:profileID', component: MessagingComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'profile/edit', component: ProfileEditComponent},
