@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserList } from 'src/data/users';
 
 @Component({
@@ -24,8 +25,13 @@ export class MatchingMatchComponent {
     this.profile = users.getUser(this.profileID);
   }
 
-  constructor() {
+  constructor(private router : Router) {
     this.profileID = null as any;
     this.profile = null as any;
+  }
+
+  messagingRedirect() {
+    console.log("clicked on the user");
+    this.router.navigate(['./messages', encodeURIComponent(this.profileID)]);
   }
 }

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterScreenComponent},
   {path: 'matching-a', component: MatchingSwipeComponent},
   {path: 'matching-b', component: MatchingGridComponent},
-  {path: 'messages', component: MessagingComponent},
+  {path: 'messages/:profileID', component: MessagingComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'profile/edit', component: ProfileEditComponent},
   {path: 'profile/create', component: ProfileCreateComponent},

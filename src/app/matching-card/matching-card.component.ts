@@ -20,4 +20,5 @@ export class MatchingCardComponent {
   constructor() {
     this.profile = null as any;
   }
+
 }
