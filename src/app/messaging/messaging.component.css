@@ -85,3 +85,9 @@ button {
     transform:translate(-30px, -2px);
     width: 10px;
   }
+
+  .errorMsg {
+    font-size: 20px;
+    position: relative;
+    left: 220px;
+  }

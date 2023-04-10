@@ -1,5 +1,6 @@
 <div class="fullscreen">
     <app-matching-matches [matchIDs]="matches"></app-matching-matches>
+    <ng-container *ngIf="messagingVisible">
     <ul class="contact">
         <li>
             <img 
@@ -10,7 +11,6 @@
             <p>{{profile.name}}</p>
         </li>
     </ul>
-
     <ul>
         <li class="absolute bottom-0">
             <ng-container *ngIf="visible" >
@@ -23,6 +23,9 @@
             placeholder="Say hi to start the conversation!">
             <button id="reveal" (click)="Message()">Send!</button>
         </li>
-        
     </ul>
+    </ng-container>
+    <ng-container *ngIf="noMatches">
+        <p class="errorMsg">No matches to message yet!</p>
+    </ng-container>
 </div>
