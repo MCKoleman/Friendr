@@ -9,9 +9,17 @@ import { UserList } from 'src/data/users';
 })
 export class MessagingComponent {
   userMessageInput: string;
-  messages: string[];
+  messages: {
+    time: string,
+    day: string,
+    month: string,
+    year: string,
+    message: string,
+    self: boolean
+  }[];
   visible = false;
   profileID: string = "";
+  curTime: any;
 
   profile: {
     id: string,
@@ -26,10 +34,27 @@ export class MessagingComponent {
   matches: [id: string];
 
   sendMessage() {
+    // Don't allow empty messages
+    if (this.userMessageInput.trim() === "") {
+      return;
+    }
+
+    // If this is the first message, start a new list
     if (this.messages == null) {
       this.messages = [];
     }
-    this.messages.push(this.userMessageInput);
+
+    // Get the 
+    let time = new Date();
+    let message = {
+      time: time.getHours().toString().padStart(2, '0') + ":" + time.getMinutes().toString().padStart(2, '0'),
+      day: time.getDate().toString(),
+      month: time.getMonth().toString(),
+      year: time.getFullYear().toString(),
+      message: this.userMessageInput,
+      self: true
+    };
+    this.messages.push(message);
     this.userMessageInput = null as any;
     this.visible = !this.visible;
 
@@ -56,6 +81,7 @@ export class MessagingComponent {
     if (this.messages != null) {
       this.messages = this.messages.slice(this.messages.length - 7, this.messages.length);
     }
+    console.log(this.messages);
   }
 
   getMatches() {
@@ -66,7 +92,7 @@ export class MessagingComponent {
   }
 
   ngOnChanges() {
-
+    this.curTime = new Date();
   }
 
   ngOnInit() {
@@ -96,6 +122,7 @@ export class MessagingComponent {
     this.matches = null as any;
     this.userMessageInput = null as any;
     this.messages = [];
+    this.curTime = new Date();
     this.getMatches();
   }
 }

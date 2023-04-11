@@ -12,8 +12,22 @@
         <ul>
             <li class="absolute bottom-0">
                 <ul class="flex relative justify-end flex-col mb-3">
-                    <tr *ngFor="let message of messages;" class="inline-block mr-0 ml-auto">
-                        <p class="message w-10 m-2" id="reveal">{{message}}</p>
+                    <tr *ngFor="let message of messages;" class="inline-block">
+                        <p class="message mr-0 ml-auto w-10 mt-2" id="reveal">
+                            {{message.message}}
+                        </p>
+                        <div class="text-sm text-right mr-0 ml-auto text-black">
+                            <span *ngIf="curTime != null && message.year != curTime.getFullYear().toString()"
+                                class="nobr">
+                                {{message.month}}&#47;{{message.day}}&#47;{{message.year}}
+                            </span>
+                            <span *ngIf="curTime != null && message.year == curTime.getFullYear().toString()
+                            && (message.day != curTime.getDate().toString() 
+                            || message.month != curTime.getMonth().toString())">
+                                {{message.month}}&#47;{{message.day}}
+                            </span>
+                            {{message.time}}
+                        </div>
                     </tr>
                 </ul>
                 <input [(ngModel)]="userMessageInput"

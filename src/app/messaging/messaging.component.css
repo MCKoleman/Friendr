@@ -54,7 +54,10 @@ button {
     line-height: 1.25;
     max-width: 100%;
     width: fit-content;
-    padding: 0.5rem .875rem;
+    padding-right: 0.875rem;
+    padding-left: 0.875rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     text-align: right;
     word-wrap: break-word;
     bottom: 40px;
