@@ -1,5 +1,6 @@
 .container {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(247, 252, 255, 0.5) 0%, rgba(112, 169, 200, 0.5) 100%);
+
+    background: radial-gradient(50% 50% at 50% 50%, rgb(223, 239, 250) 0%, rgb(157, 206, 233) 100%);
     border: 1px solid #000000;
     position: absolute;
     width: 450px;

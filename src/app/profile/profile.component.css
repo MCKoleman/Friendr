@@ -1,3 +1,8 @@
+.fullscreen {
+    background: radial-gradient(50% 50% at 50% 50%, #E9F2F8 0%, #86BBD8 100%);
+    mix-blend-mode: normal;
+}
+
 button {
     padding: 8px;
     min-width: 125px;
@@ -25,8 +30,8 @@ button {
 }
 
 .pfp {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     margin-left: 25px;
     margin-right: 25px;
