@@ -1,38 +1,108 @@
 <div class="fullscreen">
     <div class="align-middle flex justify-between" >
-        <div class="basic-info">
+        <div class="basic-info ">
                 <img src="../../assets/UserIcons/noah21.jfif"
-                    class="pfp">
-                    <ul>
+                    class="pfp ">
+                    <ul class="topic bg-white border border-white p-4 rounded-lg">
                         <li class="heading">
-                            {{userName}}, {{userAge}}
+                            <input                         
+                            class="resize-none w-8/12"
+                            rows="3"
+                            cols="20" 
+                            [readOnly]="!editBio" 
+                            [class.bg-gray]="!editBio"
+                            [disabled]="!editBio"
+                            [class.border-black]="editBio"
+                            [class.border-2]="editBio"
+                            [class.rounded-md]="editBio"
+                            (keyup.enter)="editBio = !editBio"
+                            [(ngModel)]="userName"
+                            #box1
+                            (keyup)="getName(box1.value)">
+                            
+                            <input
+                            class="resize-none w-2/12"
+                            rows="3"
+                            cols="20" 
+                            [readOnly]="!editBio" 
+                            [class.bg-gray]="!editBio"
+                            [disabled]="!editBio"
+                            [class.border-black]="editBio"
+                            [class.border-2]="editBio"
+                            [class.rounded-md]="editBio"
+                            (keyup.enter)="editBio = !editBio"
+                            [(ngModel)]="userAge"
+                            #box2
+                            (keyup)="getAge(box2.value)">
+                            
                         </li>
-                        <li class="sub">
-                            {{userBio}}
-                        </li>
+                        <textarea 
+                        class="resize-none"
+                        rows="3"
+                        cols="40" 
+                        [readOnly]="!editBio" 
+                        [class.bg-gray]="!editBio"
+                        [disabled]="!editBio"
+                        [class.border-black]="editBio"
+                        [class.border-2]="editBio"
+                        [class.rounded-md]="editBio"
+                        (keyup.enter)="editBio = !editBio"
+                        [(ngModel)]="userBio"
+                        #box3
+                        (keyup)="getBio(box3.value)">
+                        {{userBio}}
+                    </textarea> 
+                        <img class="w-5 h-5 ml-auto hover:bg-blue-200" src="../../assets/pencil.svg" (click)="editBio = !editBio">
                     </ul>
         </div>
         <div class="posts space-x-7" >
             <img src="../../assets/UserPictures/black-cat.jpg">
             <img src="../../assets/UserPictures/mountains.jpg">  
-            <div><app-button text="See more"></app-button> </div>
         </div>
-        <div class="align-top">
-            <div class="topic"> 
+        <div class="align-top pt-10">
+            <div class="topic bg-white border border-white p-4 rounded-lg"> 
                 <h1 class="heading">
                     Interests:
                 </h1>
-                <div class="sub">
+                <textarea 
+                    class="resize-none"
+                    rows="3"
+                    cols="40" 
+                    [readOnly]="!editInterests" 
+                    [class.bg-gray]="!editInterests"
+                    [disabled]="!editInterests"
+                    [class.border-black]="editInterests"
+                    [class.border-2]="editInterests"
+                    [class.rounded-md]="editInterests"
+                    (keyup.enter)="editInterests = !editInterests"
+                    [(ngModel)]="userInterests"
+                    #box4
+                    (keyup)="getInterests(box4.value)">
                     {{userInterests}}
-                </div>
+                </textarea> 
+                <img class="w-5 h-5 ml-auto hover:bg-blue-200" src="../../assets/pencil.svg" (click)="editInterests = !editInterests">
             </div>
-            <div class="topic"> 
+            <div class="topic bg-white border border-white p-4 rounded-lg"> 
                 <h1 class="heading">
                     Looking for:
                 </h1>
-                <div class="sub">
+                <textarea 
+                    class="resize-none"
+                    rows="3"
+                    cols="40" 
+                    [readOnly]="!editLooking" 
+                    [class.bg-gray]="!editLooking"
+                    [disabled]="!editLooking"
+                    [class.border-black]="editLooking"
+                    [class.border-2]="editLooking"
+                    [class.rounded-md]="editLooking"
+                    (keyup.enter)="editLooking = !editLooking"
+                    [(ngModel)]="userLooking"
+                    #box5
+                    (keyup)="getLooking(box5.value)">
                     {{userLooking}}
-                </div>
+                </textarea> 
+                <img class="w-5 h-5 ml-auto hover:bg-blue-200" src="../../assets/pencil.svg" (click)="editLooking = !editLooking">
             </div>
             <div class="pt-10 absolute right-10" >
                 <app-button className="button"  link="\profile/edit" text="Edit Profile">Edit Profile</app-button>
