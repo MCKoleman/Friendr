@@ -47,8 +47,15 @@ button img {
 }
 
 .matching-profile h4 {
+    background-color: white;
+    background-size: 100% 100%;
+    border-radius: 15px;
+    padding: 0;
+    display: inline-block;
     width: 150px;
+    height: 150px;
+    min-height: 100%;
+    min-width: 100%;
     position: relative;
-    top: -30px;
     font-weight: 250;
 }
