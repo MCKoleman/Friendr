@@ -15,11 +15,13 @@ export class ProfileComponent {
   editInterests = false;
   editLooking = false;
   editBio = false;
+  editName = false;
+  editAge = false;
 
   getName(name:string) {
     console.warn(name);
     this.userName = name;
-    localStorage.setItem("name", this.userName + ',');
+    localStorage.setItem("name", this.userName);
   }
 
   getAge(age:string) {
@@ -43,6 +45,8 @@ export class ProfileComponent {
     this.userLooking = looking
     localStorage.setItem("looking", this.userLooking)
   }
+
+  
   // getProfile(profile:string) {
   //   console.warn(profile);
   //   this.userProfile = profile
