@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { userList } from 'src/data/users';
+import { UserList } from 'src/data/users';
 
 @Component({
   selector: 'app-matching-grid',
@@ -7,5 +7,42 @@ import { userList } from 'src/data/users';
   styleUrls: ['./matching-grid.component.css']
 })
 export class MatchingGridComponent {
-  users = userList;
+  matches: [id: string];
+  users: any;
+  filterView = false;
+
+  updateDisplay() {
+    this.getMatches();
+    let tempUsers = new UserList().userList;
+    this.users = [] as any;
+
+    // Only add users to the list that have not been matched with
+    for (let i = 0; i < tempUsers.length; i++) {
+      if (!this.matches.includes(tempUsers[i].id)) {
+        this.users.push(tempUsers[i]);
+      }
+    }
+  }
+
+  getMatches() {
+    let rawMatches = localStorage.getItem("matches");
+    if (rawMatches !== null) {
+      this.matches = JSON.parse(rawMatches);
+    }
+  }
+
+  toggleFilterView() {
+    this.filterView = !this.filterView;
+  }
+
+  ngOnChanges() {
+    this.filterView = false;
+    this.updateDisplay();
+  }
+
+  constructor() {
+    this.matches = [] as any;
+    this.users = new UserList().userList;
+    this.updateDisplay();
+  }
 }

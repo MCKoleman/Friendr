@@ -12,26 +12,59 @@
 
 .contact img {
     border-radius: 50%;
+    border: 1px solid #3C3C3C;
     height: 80px;
     width: 80px;
     margin-right: 20px;
+    position: relative;
+    left: 70px;
 }
 
 .contact p {
     font-size: 25px;
     font-weight: 500;
+    position: relative;
+    left: 70px;
 }
 
 input {
+    font-size: 1.25rem;
     width: 384px;
     border-radius: 8px;
     padding: 5px;
+    word-wrap: break-word;
 }
 
 button {
+    font-size: 1.25rem;
     padding: 5px;
     min-width: 125px;
     background-color: orange;
     border-color:rgb(0, 10, 0);
     border-radius: 10px;
+    position: relative;
+    right: -10px;
 }
+
+.message {
+    background-color: #fff;
+    border: 1px solid #e5e5ea;
+    border-radius: 25px;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    max-width: 100%;
+    width: fit-content;
+    padding-right: 0.875rem;
+    padding-left: 0.875rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: right;
+    word-wrap: break-word;
+    bottom: 40px;
+  }
+
+  .errorMsg {
+    font-size: 20px;
+    position: relative;
+    left: 220px;
+  }

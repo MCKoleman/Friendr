@@ -6,5 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  onClearData() {
+    localStorage.removeItem("matches");
+    localStorage.removeItem("rejects");
+    localStorage.removeItem("messages");
+    localStorage.removeItem("name");
+    localStorage.removeItem("age");
+    localStorage.removeItem("bio");
+    localStorage.removeItem("interests");
+    localStorage.removeItem("looking");
+    window.location.reload();
+    window.scroll(0, 0);
+  }
 
+  swapMode() {
+    let mode = 0;
+    let rawMode = localStorage.getItem("mode");
+    if (rawMode !== null) {
+      mode = parseInt(rawMode);
+    }
+
+    // Swap the mode of the app
+    mode = (mode + 1) % 2;
+    localStorage.setItem("mode", mode.toString());
+    window.location.reload();
+    window.scroll(0, 0);
+  }
 }

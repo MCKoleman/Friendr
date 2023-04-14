@@ -1,18 +1,19 @@
 button {
     padding: 8px;
-    min-width: 125px;
-    background-color: orange;
+    min-width: 150px;
+    background-color: #ffa928;
     border-color:rgb(0, 10, 0);
-    border-radius: 10px;
-    
+    border-radius: 15px;
+    border: 1px solid;
 }
 
 button a {
     text-decoration: none;
+    font-weight: 350;
     color: black;
 }
 
 button:hover {
-    background-color: rgb(245, 14, 14);
+    background-color: rgb(215, 122, 0);
     border-color:rgb(0, 0, 0);
 }

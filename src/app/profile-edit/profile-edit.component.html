@@ -1,33 +1,33 @@
 <div class="fullscreen">
     <div class="align-middle flex justify-between" >
         <div class="basic-info">
-                <img src="../../assets/UserIcons/connor24.jfif"
+                <img src="../../assets/UserIcons/noah21.jfif"
                     class="pfp">
                     <input 
                         type="file"
                         [(ngModel)]="userProfile" 
                         #image
-                        (keyup)="getProfile(image.value)"                
-                    >
-                    <form>
+                        (keyup)="getProfile(image.value)">
+                    <ul>
                         <li class="text-xl" type="text">
                             <p>Name: </p>
                             <input 
                                 [(ngModel)]="userName"
                                 #box
                                 (keyup)="getName(box.value)"
-                                placeholder="Set new name"
-                            >
+                                placeholder="Set new name">
                         </li>
                         <li class="text-xl">
                             <p>Age: </p>
                             <input
+                                type="number"
+                                min="18"
+                                max="100"
+                                step="1"
                                 [(ngModel)]="userAge"
                                 #box2
                                 (keyup)="getAge(box2.value)"
-                                placeholder="Set new age"
-
-                            >
+                                placeholder="Set new age">
                         <li class="text-xl">
                             <p>Bio: </p>
                             <textarea rows="3"
@@ -35,44 +35,42 @@
                                 #box3
                                 (keyup)="getBio(box3.value)"
                                 placeholder="Create new bio"
-                                
-                            >
-                            </textarea>     
+                            ></textarea>     
                         </li>
-                    </form>
+                    </ul>
         </div>
         <div class="posts space-x-7" >
-            <img src="../../assets/UserPictures/CollegeFun.jpeg">
-            <img src="../../assets/UserPictures/RocketLaunch.jpg">  
-            <div><app-button text="See more"></app-button> </div>
+            <img src="../../assets/UserPictures/black-cat.jpg">
+            <img src="../../assets/UserPictures/mountains.jpg">  
+            <app-button text="See more" link="\"></app-button>
         </div>
-        <div class="align-top">
+        <div class = "topics">
             <div class="topic"> 
                 <h1 class="heading">
                     Interests:
                 </h1>
                 <textarea rows="4"
+                    cols="77"
                     [(ngModel)]="userInterests"
                     #box4
                     (keyup)="getInterests(box4.value)"
                     placeholder="Add interests"
-                >
-                </textarea>     
+                ></textarea>     
             </div>
             <div class="topic"> 
                 <h1 class="heading">
                     Looking for:
                 </h1>
                 <textarea rows="4"
+                    cols="77"
                     [(ngModel)]="userLooking"
                     #box5
                     (keyup)="getLooking(box5.value)"
                     placeholder="Add what you are looking for"
-                >
-                </textarea>   
+                ></textarea>   
             </div>
             <div class="pt-10 absolute right-10" >
-                <app-button className="button"  link="\profile" text="Done!">Done!</app-button>
+                <app-button className="button" link="\profile" text="Save"></app-button>
             </div>
         </div>
     </div>

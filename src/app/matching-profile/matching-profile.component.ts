@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { UserList } from 'src/data/users';
 
 @Component({
   selector: 'app-matching-profile',
@@ -6,13 +7,36 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./matching-profile.component.css']
 })
 export class MatchingProfileComponent {
-  @Input() profile = {
-    name: "Sample",
-    age: 123,
-    bio: "Sample bio",
-    interests: "Sample interests",
-    lookingfor: "Sample looking",
-    pfp: "../assets/UserIcons/dhinesh24.png",
-    imgs: [] as string[]
-  };
+  @Input() profile: {
+    id: string,
+    name: string,
+    age: number,
+    gender: string,
+    bio: string,
+    interests: string,
+    lookingfor: string,
+    pfp: string,
+    imgs: string[]
+  }
+  gender = '';
+  @Output() matchEvent = new EventEmitter<string>();
+
+  onAccept() {
+    let matches = [];
+    let rawMatches = localStorage.getItem("matches");
+    if (rawMatches !== null) {
+      matches = JSON.parse(rawMatches);
+    }
+    matches.push(this.profile.id);
+    localStorage.setItem("matches", JSON.stringify(matches));
+    this.matchEvent.emit("");
+  }
+
+  ngOnChanges() {
+    this.gender = UserList.getGender(this.profile.gender);
+  }
+
+  constructor() {
+    this.profile = null as any;
+  }
 }
