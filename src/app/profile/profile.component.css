@@ -2,19 +2,21 @@
     vertical-align: top;
     position: relative;
     right: 120px;
-    top: 10px;
+    top: 30px;
 }
 
 ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    vertical-align: center;
+    justify-content: center;
 }
 
 ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    vertical-align: center;
 }
 
 .gender{
@@ -49,7 +51,6 @@ textarea {
     font-weight: 300;
     border-radius: 20px;
     padding: 10px;
-    margin: 2px 2px 2px 2px;
 }
 
 h1 {
@@ -63,6 +64,7 @@ h1 {
     width: 275px;
     border-radius: 50%;
     border: 2px solid #3C3C3C;
+    margin-bottom: -10px;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
@@ -70,6 +72,7 @@ h1 {
     position: relative;
     left: 130px;
     bottom: 10px;
+    margin-bottom: -20px;
 }
 
 .pen-input {

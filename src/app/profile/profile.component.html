@@ -5,8 +5,8 @@
                 <li><img src="../../assets/UserIcons/noah21.jfif"
                     class="pfp ">
                     <img class="pen pen-pfp" src="../../assets/pencil.svg" (click)="editBio = !editBio">
-                    </li>
-                        <li >
+                    <ul class="topic">
+                        <li class="heading-input">
                             <h1>Name:</h1>
                             <input                         
                             class="resize-none"
@@ -60,6 +60,8 @@
                             </div>
                         </li>
                     </ul>
+                </li>
+                </ul>
         </div>
         <div class="align-top">
             <div class="topic"> 
@@ -78,10 +80,11 @@
                         #box3
                         (keyup)="getBio(box3.value)">
                         {{userBio}}
-                </textarea> 
-                <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editBio = !editBio">
-            </div>
-            <div class="topic">
+                    </textarea> 
+                        <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editBio = !editBio">
+        </div>
+        <div>
+            <div class="topic"> 
                 <h1 class="heading">
                     Interests:
                 </h1>
