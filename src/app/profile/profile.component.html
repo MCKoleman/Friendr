@@ -46,15 +46,19 @@
                         <li>
                             <h1>Gender:</h1>
                             <div class="gender">
-                            <input type="radio" name="gender" value="male"> 
+                            <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="male"> 
                             <p>Male</p>
                             </div>
                             <div class="gender">
-                            <input type="radio" name="gender" value="female">
+                            <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="female">
                             <p>Female</p>
                             </div>
                             <div class="gender">
-                            <input type="radio" name="gender" value="none">
+                            <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="other">
+                            <p>Other</p>
+                            </div>
+                            <div class="gender">
+                            <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="none">
                             <p>Prefer not to say</p>
                             </div>
                         </li>
@@ -79,11 +83,10 @@
                         #box3
                         (keyup)="getBio(box3.value)">
                         {{userBio}}
-                    </textarea> 
-                        <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editBio = !editBio">
-        </div>
-        <div>
-            <div class="topic"> 
+                </textarea> 
+                <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editBio = !editBio">
+            </div>
+            <div class="topic">
                 <h1 class="heading">
                     Interests:
                 </h1>
