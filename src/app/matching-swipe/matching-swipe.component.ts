@@ -15,6 +15,7 @@ export class MatchingSwipeComponent {
     id: string,
     name: string,
     age: number,
+    gender: string,
     bio: string,
     interests: string,
     lookingfor: string,
