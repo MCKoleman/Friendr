@@ -66,6 +66,12 @@ h1 {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
+.pen {
+    height: 20px;
+    width: 20px;
+    float: right;
+}
+
 .pen-input {
     position: relative;
     left: 120px;
@@ -86,17 +92,6 @@ h1 {
     right: 20px;
     top: 30px;
 }
-
-.pen {
-    height: 20px;
-    width: 20px;
-    float: right;
-}
-
-.pen:hover {
-    background-color: rgba(240, 247, 255, 0.718);
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
