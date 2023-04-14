@@ -1,56 +1,110 @@
-button {
-    padding: 8px;
-    min-width: 125px;
-    background-color: orange;
-    border-color:rgb(0, 10, 0);
-    border-radius: 10px;
+.basic-info {
+    vertical-align: top;
+    position: relative;
+    right: 120px;
+    top: 10px;
 }
 
-.basic-info {
-    position: absolute;
-    top: 6rem;
-    left: 3rem;
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gender{
+    display: inline-flex;
+    align-items: center;
+}
+
+.gender p {
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 10px;
 }
 
 .heading {
     font-size: 30px;
-    font-weight: 500;
-    width: 300px;
+    font-weight: 600;
+    position: relative;
+    left: 10px;
 }
 
-.sub {
+input {
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+textarea {
     font-size: 20px;
     font-weight: 300;
-    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 2px 2px 2px 2px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 3px;
 }
 
 .pfp {
-    height: 250px;
-    width: 250px;
+    height: 275px;
+    width: 275px;
     border-radius: 50%;
-    margin-left: 25px;
-    margin-right: 25px;
-    border: 3px solid #2C638C;
+    border: 2px solid #3C3C3C;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
-.posts {
-    position: absolute;
-    top: 6rem;
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
+.pen-pfp {
+    position: relative;
+    left: 130px;
+    bottom: 10px;
 }
 
-.posts img {
-    height: 175px;
-    width: 250px;
-    border: 3px solid #2C638C;
-    border-radius: 10px;
+.pen-input {
+    position: relative;
+    left: 120px;
+    bottom: 29px;
+}
+
+.pen-textarea {
+    position: relative;
+    left: 165px;
+    bottom: 38px;
 }
 
 .topic {
-    vertical-align: top;
     text-align: left;
     margin-bottom: 20px;
     width: 400px;
+    position: relative;
+    right: 20px;
+    top: 30px;
+}
+
+textarea::hover, input::hover {
+    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5);
+}
+
+.pen {
+    height: 20px;
+    width: 20px;
+    float: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
