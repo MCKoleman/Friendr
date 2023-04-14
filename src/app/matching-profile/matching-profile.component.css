@@ -1,7 +1,7 @@
 .matching-profile {
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 0px;
+    margin-bottom: -56px;
 }
 
 div div {
@@ -44,6 +44,13 @@ button img {
     width: 150px;
     position: relative;
     top: -35px;
+}
+
+.matching-profile p {
+    width: 210px;
+    position: relative;
+    left: -30px;
+    top: -28px;
 }
 
 .matching-profile h4 {

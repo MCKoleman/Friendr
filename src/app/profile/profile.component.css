@@ -36,6 +36,12 @@ ul li {
     left: 10px;
 }
 
+.heading-input h1 {
+    text-align: center;
+    position: relative;
+    left: 10px;
+}
+
 input {
     font-size: 25px;
     font-weight: 600;
