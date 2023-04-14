@@ -2,7 +2,6 @@
     vertical-align: top;
     position: relative;
     right: 120px;
-    top: 30px;
 }
 
 ul {
@@ -64,15 +63,7 @@ h1 {
     width: 275px;
     border-radius: 50%;
     border: 2px solid #3C3C3C;
-    margin-bottom: -10px;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
-}
-
-.pen-pfp {
-    position: relative;
-    left: 130px;
-    bottom: 10px;
-    margin-bottom: -20px;
 }
 
 .pen-input {
@@ -96,14 +87,14 @@ h1 {
     top: 30px;
 }
 
-textarea::hover, input::hover {
-    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5);
-}
-
 .pen {
     height: 20px;
     width: 20px;
     float: right;
+}
+
+.pen:hover {
+    background-color: rgba(240, 247, 255, 0.718);
 }
 
 input::-webkit-outer-spin-button,
