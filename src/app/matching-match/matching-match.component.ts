@@ -13,6 +13,7 @@ export class MatchingMatchComponent {
     id: string,
     name: string,
     age: number,
+    gender: string,
     bio: string,
     interests: string,
     lookingfor: string,
@@ -20,11 +21,13 @@ export class MatchingMatchComponent {
     imgs: string[]
   };
   url: string;
+  gender = '';
   
   ngOnChanges() {
     let users = new UserList();
     this.profile = users.getUser(this.profileID);
     this.url = "./messages/" + this.profileID;
+    this.gender = UserList.getGender(this.profile.gender);
   }
 
   constructor(private router : Router) {
