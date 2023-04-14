@@ -80,23 +80,22 @@ h1 {
 
 .pen-input {
     position: relative;
-    left: 120px;
-    bottom: 29px;
+    left: 142px;
+    bottom: 36px;
 }
 
 .pen-textarea {
     position: relative;
-    left: 165px;
-    bottom: 38px;
+    align-self: flex-end;
+    right: 45px;
+    top: 10px;
 }
 
 .topic {
     text-align: left;
-    margin-bottom: 20px;
-    width: 400px;
+    margin-bottom: 5px;
+    width: 600px;
     position: relative;
-    right: 20px;
-    top: 30px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
