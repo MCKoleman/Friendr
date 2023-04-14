@@ -1,6 +1,18 @@
 <div class="fullscreen">
     <app-matching-matches [matchIDs]="matches"></app-matching-matches>
     <ul class="h-screen overflow-auto scrollbar-hide grid grid-flow-row-dense grid-cols-3 pt-7" style="align-items: start">
+        <div *ngIf="filterView" class="filter-elem">
+            Filters
+            <button (click)="toggleFilterView()">
+                <img src="../../assets/funnel-cropped.svg"
+                    class="invert"
+                    width="40px"
+                    height="40px"/>
+            </button>
+            <span *ngIf="filterView">
+                Filter is enabled
+            </span>
+        </div>
         <tr *ngFor="let user of users;">
             <app-matching-profile [profile]="user" (matchEvent)="updateDisplay()"></app-matching-profile>
         </tr>
