@@ -9,6 +9,7 @@ import { UserList } from 'src/data/users';
 export class MatchingGridComponent {
   matches: [id: string];
   users: any;
+  filterView = false;
 
   updateDisplay() {
     this.getMatches();
@@ -30,7 +31,12 @@ export class MatchingGridComponent {
     }
   }
 
+  toggleFilterView() {
+    this.filterView = !this.filterView;
+  }
+
   ngOnChanges() {
+    this.filterView = false;
     this.updateDisplay();
   }
 
