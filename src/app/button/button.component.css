@@ -1,7 +1,7 @@
 button {
     padding: 8px;
     min-width: 150px;
-    background-color: #ffc875;
+    background-color: #ffa928;
     border-color:rgb(0, 10, 0);
     border-radius: 15px;
     border: 1px solid;
@@ -14,6 +14,6 @@ button a {
 }
 
 button:hover {
-    background-color: rgb(255, 145, 0);
+    background-color: rgb(215, 122, 0);
     border-color:rgb(0, 0, 0);
 }

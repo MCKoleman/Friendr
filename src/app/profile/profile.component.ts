@@ -19,6 +19,14 @@ export class ProfileComponent {
   editName = false;
   editAge = false;
 
+  saveAll() {
+    this.editInterests = false;
+    this.editLooking = false;
+    this.editBio = false;
+    this.editName = false;
+    this.editAge = false;
+  }
+
   ngOnInit() {
     const storedGender = localStorage.getItem("userGender")
     if (storedGender != null)
@@ -42,16 +50,19 @@ export class ProfileComponent {
     this.userBio = bio;
     localStorage.setItem("bio", this.userBio);
   }
+
   getInterests(interests:string) {
     console.warn(interests);
     this.userInterests = interests
     localStorage.setItem("interests", this.userInterests);
   }
+
   getLooking(looking:string) {
     console.warn(looking);
     this.userLooking = looking
     localStorage.setItem("looking", this.userLooking)
   }
+
   getGender(event: any) {
     this.userGender = event.target.value;
     localStorage.setItem("userGender", this.userGender)
