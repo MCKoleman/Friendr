@@ -1,72 +1,58 @@
 <div class="fullscreen">
-    <div class="align-middle flex justify-between" >
+    <div class="flex h-full mt-16">
         <div class="basic-info">
-            <ul>
-                <li><img src="../../assets/UserIcons/noah21.jfif"
-                    class="pfp ">
-                    <ul class="topic">
-                        <li class="heading-input">
-                            <h1>Name:</h1>
-                            <input class="resize-none"
-                                rows="3"
-                                cols="40" 
-                                placeholder="Your name here"
-                                [readOnly]="!editName" 
-                                [class.bg-gray]="!editName"
-                                [disabled]="!editName"
-                                [class.border-black]="editName"
-                                [class.border-2]="editName"
-                                (keyup.enter)="editName = !editName"
-                                [(ngModel)]="userName"
-                                #box1
-                                (keyup)="getName(box1.value)"/>
-                                <svg class="pen pen-input mt-2 w-6 h-6 hover:stroke-orange-700" (click)="editName = !editName" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                                </svg>
-                        </li>
-                        <li class="heading-input">
-                            <h1>Age:</h1>
-                            <input class="resize-none"
-                                rows="3"
-                                cols="40" 
-                                type="number"
-                                placeholder="Your age here"
-                                [readOnly]="!editAge" 
-                                [class.bg-gray]="!editAge"
-                                [disabled]="!editAge"
-                                [class.border-black]="editAge"
-                                [class.border-2]="editAge"
-                                (keyup.enter)="editAge = !editAge"
-                                (dblclick)="editAge = true"
-                                [(ngModel)]="userAge"
-                                #box2
-                                (keyup)="getAge(box2.value)"/>
-                                <svg class="pen pen-input mt-2 w-6 h-6 hover:stroke-orange-700" (click)="editAge = !editAge" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                                </svg>
-                        </li>
-                        <li>
-                            <h1>Gender:</h1>
-                            <ul class="grid grid-cols-2 grid-rows-2">
-                                <div class="gender">
-                                    <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="male"/> 
-                                    <p>Male</p>
-                                </div>
-                                <div class="gender">
-                                    <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="female"/>
-                                    <p>Female</p>
-                                </div>
-                                <div class="gender">
-                                    <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="other"/>
-                                    <p>Other</p>
-                                </div>
-                                <div class="gender">
-                                    <input type="radio" name="gender" [(ngModel)]="userGender" (change)="getGender($event)" value="none"/>
-                                    <p>Prefer not to say</p>
-                                </div>
-                            </ul>
-                        </li>
-                    </ul>
+            <ul class="topic">
+                <li><img src="../../assets/UserIcons/noah21.jfif" class="pfp "/></li>
+                <li class="heading-input">
+                    <h1>Name:</h1>
+                    <input class="resize-none"
+                        rows="3"
+                        cols="40" 
+                        placeholder="Your name here"
+                        [readOnly]="!editName" 
+                        [class.bg-gray]="!editName"
+                        [disabled]="!editName"
+                        [class.border-black]="editName"
+                        [class.border-2]="editName"
+                        (keyup.enter)="editName = !editName"
+                        [(ngModel)]="userName"
+                        #box1
+                        (keyup)="getName(box1.value)"/>
+                        <svg class="pen pen-input mt-2 w-6 h-6 hover:stroke-orange-700" (click)="editName = !editName" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
+                </li>
+                <li class="heading-input">
+                    <h1>Age:</h1>
+                    <input class="resize-none"
+                        rows="3"
+                        cols="40" 
+                        type="number"
+                        placeholder="Your age here"
+                        [readOnly]="!editAge" 
+                        [class.bg-gray]="!editAge"
+                        [disabled]="!editAge"
+                        [class.border-black]="editAge"
+                        [class.border-2]="editAge"
+                        (keyup.enter)="editAge = !editAge"
+                        (dblclick)="editAge = true"
+                        [(ngModel)]="userAge"
+                        #box2
+                        (keyup)="getAge(box2.value)"/>
+                        <svg class="pen pen-input mt-2 w-6 h-6 hover:stroke-orange-700" (click)="editAge = !editAge" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
+                </li>
+                <li>
+                    <h1>Gender:</h1>
+                    <select id="gender" (change)="getGender($event)" 
+                        class="block px-6 py-2 text-base rounded-xl bg-orange-400 border border-black">
+                        <option selected>Choose your gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="X">Other</option>
+                        <option value="_">Prefer not to say</option>
+                    </select>
                 </li>
             </ul>
         </div>
