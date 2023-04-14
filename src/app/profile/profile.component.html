@@ -1,41 +1,133 @@
 <div class="fullscreen">
     <div class="align-middle flex justify-between" >
         <div class="basic-info">
-                <img src="../../assets/UserIcons/noah21.jfif"
-                    class="pfp">
-                    <ul>
-                        <li class="heading">
-                            {{userName}}, {{userAge}}
+                <ul>
+                <li><img src="../../assets/UserIcons/noah21.jfif"
+                    class="pfp ">
+                    <img class="pen pen-pfp" src="../../assets/pencil.svg" (click)="editBio = !editBio">
+                    <ul class="topic">
+                        <li class="heading-input">
+                            <h1>Name:</h1>
+                            <input                         
+                            class="resize-none"
+                            rows="3"
+                            cols="40" 
+                            placeholder="Your name here"
+                            [readOnly]="!editName" 
+                            [class.bg-gray]="!editName"
+                            [disabled]="!editName"
+                            [class.border-black]="editName"
+                            [class.border-2]="editName"
+                            (keyup.enter)="editName = !editName"
+                            [(ngModel)]="userName"
+                            #box1
+                            (keyup)="getName(box1.value)">
+                            <img class="pen pen-input" src="../../assets/pencil.svg" (click)="editName = !editName">
                         </li>
-                        <li class="sub">
-                            {{userBio}}
+                        <li>
+                            <h1>Age:</h1>
+                            <input
+                            class="resize-none"
+                            rows="3"
+                            cols="40" 
+                            type="number"
+                            placeholder="Your age here"
+                            [readOnly]="!editAge" 
+                            [class.bg-gray]="!editAge"
+                            [disabled]="!editAge"
+                            [class.border-black]="editAge"
+                            [class.border-2]="editAge"
+                            (keyup.enter)="editAge = !editAge"
+                            (dblclick)="editAge = true"
+                            [(ngModel)]="userAge"
+                            #box2
+                            (keyup)="getAge(box2.value)">
+                            <img class="pen pen-input" src="../../assets/pencil.svg" (click)="editAge = !editAge">
+                        </li>
+                        <li>
+                            <h1>Gender:</h1>
+                            <div class="gender">
+                            <input type="radio" name="gender" value="male"> 
+                            <p>Male</p>
+                            </div>
+                            <div class="gender">
+                            <input type="radio" name="gender" value="female">
+                            <p>Female</p>
+                            </div>
+                            <div class="gender">
+                            <input type="radio" name="gender" value="none">
+                            <p>Prefer not to say</p>
+                            </div>
                         </li>
                     </ul>
-        </div>
-        <div class="posts space-x-7" >
-            <img src="../../assets/UserPictures/black-cat.jpg">
-            <img src="../../assets/UserPictures/mountains.jpg">  
-            <div><app-button text="See more"></app-button> </div>
+                </li>
+                </ul>
         </div>
         <div class="align-top">
+            <div class="topic"> 
+                <h1 class="heading">Bio:</h1>
+                    <textarea class="resize-none"
+                        rows="2"
+                        cols="60" 
+                        placeholder="Enter your bio here..."
+                        [readOnly]="!editBio" 
+                        [class.bg-gray]="!editBio"
+                        [disabled]="!editBio"
+                        [class.border-black]="editBio"
+                        [class.border-2]="editBio"
+                        (keyup.enter)="editBio = !editBio"
+                        [(ngModel)]="userBio"
+                        #box3
+                        (keyup)="getBio(box3.value)">
+                        {{userBio}}
+                    </textarea> 
+                        <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editBio = !editBio">
+        </div>
+        <div>
             <div class="topic"> 
                 <h1 class="heading">
                     Interests:
                 </h1>
-                <div class="sub">
+                <textarea 
+                    class="resize-none"
+                    rows="4"
+                    cols="60" 
+                    placeholder="Enter your interests here..."
+                    [readOnly]="!editInterests" 
+                    [class.bg-gray]="!editInterests"
+                    [disabled]="!editInterests"
+                    [class.border-black]="editInterests"
+                    [class.border-2]="editInterests"
+                    (keyup.enter)="editInterests = !editInterests"
+                    [(ngModel)]="userInterests"
+                    #box4
+                    (keyup)="getInterests(box4.value)">
                     {{userInterests}}
-                </div>
+                </textarea> 
+                <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editInterests = !editInterests">
             </div>
             <div class="topic"> 
                 <h1 class="heading">
                     Looking for:
                 </h1>
-                <div class="sub">
+                <textarea 
+                    class="resize-none"
+                    rows="4"
+                    cols="60" 
+                    placeholder="Enter what you are looking for here..."
+                    [readOnly]="!editLooking" 
+                    [class.bg-gray]="!editLooking"
+                    [disabled]="!editLooking"
+                    [class.border-black]="editLooking"
+                    [class.border-2]="editLooking"
+                    (keyup.enter)="editLooking = !editLooking"
+                    (dblclick)="editLooking = !editLooking"
+                    [(ngModel)]="userLooking"
+                    #box5
+                    (keyup)="getLooking(box5.value)">
                     {{userLooking}}
-                </div>
-            </div>
-            <div class="pt-10 absolute right-10" >
-                <app-button className="button"  link="\profile/edit" text="Edit Profile">Edit Profile</app-button>
+                </textarea> 
+                <img class="pen pen-textarea" src="../../assets/pencil.svg" (click)="editLooking = !editLooking">
             </div>
         </div>
     </div>

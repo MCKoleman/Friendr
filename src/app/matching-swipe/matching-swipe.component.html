@@ -1,5 +1,6 @@
 <div class="fullscreen">
     <app-matching-matches [matchIDs]="matches" style="min-width: 300px"></app-matching-matches>
+    <div class="matching-card">
     <button *ngIf="curMatch != null" class="btn reject" (click)="onReject()">
         <img src="../../assets/no-symbol-cropped.svg"/>
     </button>
@@ -10,4 +11,5 @@
     <button *ngIf="curMatch != null" class="btn accept" (click)="onAccept()">
         <img src="../../assets/Handshake.png"/>
     </button>
+    </div>
 </div>

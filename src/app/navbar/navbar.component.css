@@ -7,7 +7,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(246, 205, 133, 0.5) 0%, rgba(198, 134, 19, 0.5) 18.75%, rgba(161, 110, 19, 0.5) 51.04%, rgba(198, 134, 19, 0.5) 81.77%, rgba(249, 205, 128, 0.5) 100%);
+    background: linear-gradient(180deg, #FFE3BA 0%, #FFC875 23.44%, #FFBD58 51.04%, #FFC875 79.69%, #FFE3BA 100%);
     border: 1px solid #000000;
 }
 
@@ -19,18 +19,20 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 30px;
+    padding: 6.5px 16px;
+    font-size: 40px;
+    font-weight: 500;
     text-decoration: none;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 li a:hover {
-    background-color: #fae6a6;
+    background-color: #ffe3bacc;
 }
 
 a img{
-    height: 45px;
+    height: 50px;
+    margin: 4.5px 0px;
 }
 
 .invert {
