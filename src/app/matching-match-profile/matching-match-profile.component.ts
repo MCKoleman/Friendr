@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { UserList } from 'src/data/users';
 
 @Component({
-  selector: 'app-matching-match',
-  templateUrl: './matching-match.component.html',
-  styleUrls: ['./matching-match.component.css']
+  selector: 'app-matching-match-profile',
+  templateUrl: './matching-match-profile.component.html',
+  styleUrls: ['./matching-match-profile.component.css']
 })
-export class MatchingMatchComponent {
+export class MatchingMatchProfileComponent {
   @Input() profileID: string;
   profile: {
     id: string,

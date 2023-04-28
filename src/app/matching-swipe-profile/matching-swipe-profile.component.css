@@ -1,4 +1,4 @@
-.matching-card {
+.matching-swipe-profile {
     background: white;
     border-radius: 65px;
     padding: 1.5em;
@@ -6,7 +6,7 @@
     display: inline-block;
 }
 
-.matching-card ul li {
+.matching-swipe-profile ul li {
     vertical-align: middle;
 }
 

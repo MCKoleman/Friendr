@@ -1,4 +1,4 @@
-.matching-profile {
+.matching-grid-profile {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: -56px;
@@ -37,7 +37,7 @@ button img {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.matching-profile h3 {
+.matching-grid-profile h3 {
     font-size: 18px;
     margin-bottom: -5px;
     font-weight: 500;
@@ -46,14 +46,14 @@ button img {
     top: -35px;
 }
 
-.matching-profile p {
+.matching-grid-profile p {
     width: 210px;
     position: relative;
     left: -30px;
     top: -28px;
 }
 
-.matching-profile h4 {
+.matching-grid-profile h4 {
     background-color: white;
     background-size: 100% 100%;
     border-radius: 15px;

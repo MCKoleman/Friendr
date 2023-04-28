@@ -4,7 +4,7 @@
     <button *ngIf="curMatch != null" class="btn reject" (click)="onReject()">
         <img src="../../assets/no-symbol-cropped.svg"/>
     </button>
-    <app-matching-card *ngIf="curMatch != null" [profile]="curMatch"></app-matching-card>
+    <app-matching-swipe-profile *ngIf="curMatch != null" [profile]="curMatch"></app-matching-swipe-profile>
     <div *ngIf="curMatch == null">
         <h1>No more matches left, check back later!</h1>
     </div>

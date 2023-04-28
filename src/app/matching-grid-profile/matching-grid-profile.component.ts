@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { UserList } from 'src/data/users';
 
 @Component({
-  selector: 'app-matching-profile',
-  templateUrl: './matching-profile.component.html',
-  styleUrls: ['./matching-profile.component.css']
+  selector: 'app-matching-grid-profile',
+  templateUrl: './matching-grid-profile.component.html',
+  styleUrls: ['./matching-grid-profile.component.css']
 })
-export class MatchingProfileComponent {
+export class MatchingGridProfileComponent {
   @Input() profile: {
     id: string,
     name: string,

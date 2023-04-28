@@ -1,14 +1,14 @@
-.match-card {
+.match-profile {
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.match-card img:hover {
+.match-profile img:hover {
     box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5);
 }
 
-.match-card img {
+.match-profile img {
     height: 150px;
     width: 150px;
     border: 1.5px solid #3C3C3C;
@@ -16,7 +16,7 @@
     border-radius: 20px;
 }
 
-.match-card p {
+.match-profile p {
     color: black;
     padding-top: 5px;
     font-size: 18px;

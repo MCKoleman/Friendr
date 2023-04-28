@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { UserList } from 'src/data/users';
 
 @Component({
-  selector: 'app-matching-card',
-  templateUrl: './matching-card.component.html',
-  styleUrls: ['./matching-card.component.css']
+  selector: 'app-matching-swipe-profile',
+  templateUrl: './matching-swipe-profile.component.html',
+  styleUrls: ['./matching-swipe-profile.component.css']
 })
-export class MatchingCardComponent {
+export class MatchingSwipeProfileComponent {
   @Input() profile: {
     id: string,
     name: string,
