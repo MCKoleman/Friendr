@@ -14,7 +14,7 @@
             </span>
         </div>
         <tr *ngFor="let user of users;">
-            <app-matching-profile [profile]="user" (matchEvent)="updateDisplay()"></app-matching-profile>
+            <app-matching-grid-profile [profile]="user" (matchEvent)="updateDisplay()"></app-matching-grid-profile>
         </tr>
     </ul>
 </div>

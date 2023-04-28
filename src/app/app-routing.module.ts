@@ -5,8 +5,6 @@ import { MessagingComponent } from './messaging/messaging.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { RegisterScreenComponent } from './register-screen/register-screen.component';
-import { ProfileEditComponent } from './profile-edit/profile-edit.component';
-import { ProfileCreateComponent } from './profile-create/profile-create.component';
 import { MatchingComponent } from './matching/matching.component';
 
 const routes: Routes = [
@@ -18,8 +16,6 @@ const routes: Routes = [
   {path: 'messages', component: MessagingComponent},
   {path: 'messages/:profileID', component: MessagingComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'profile/edit', component: ProfileEditComponent},
-  {path: 'profile/create', component: ProfileCreateComponent},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
